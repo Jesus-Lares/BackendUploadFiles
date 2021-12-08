@@ -5,6 +5,9 @@ const { API_VERSION } = require("./config");
 
 const app = express();
 
+//routes
+const userRoutes = require("./routers/user");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,5 +22,8 @@ app.use((req, res, next) => {
   res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
+
+//router basic
+app.use(`/api/${API_VERSION}`, userRoutes);
 
 module.exports = app;
