@@ -1,6 +1,6 @@
 {
   "name": "BackendUploadFiles",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Backend para proyecto Upload Files",
   "main": "index.js",
   "author": "Jesus",
