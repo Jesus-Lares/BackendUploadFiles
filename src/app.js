@@ -7,6 +7,7 @@ const app = express();
 
 //routes
 const userRoutes = require("./routers/user");
+const fileRoutes = require("./routers/files");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,5 +26,6 @@ app.use((req, res, next) => {
 
 //router basic
 app.use(`/api/${API_VERSION}`, userRoutes);
+app.use(`/api/${API_VERSION}`, fileRoutes);
 
 module.exports = app;
